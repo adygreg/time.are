@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #efbf1f;
+    --secondary-color: #eee;
+    --tertiary-color: #ccc;
+    --quaternary-color: #333;
+}
+::selection{
+    color: white;
+    background-color: var(--primary-color);
+}
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Montserrat, 'Arial Black', 'Arial-BoldMT', 'Arial Bold', Arial, Helvetica, sans-serif;
+}
+
+.top-section {
+    margin: 0% 5%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+header .logo-container .logo-text {
+    padding: 21px 30px;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    transition: .25s;
+}
+
+header .logo-container .logo-text:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+header .other-container input {
+    border: transparent;
+    background-color: var(--secondary-color);
+    font-size: 1.6rem;
+    padding: 0px 10px;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    margin-top: 25px;
+}
+
+main .hero {
+    color: var(--quaternary-color);
+    display: inherit;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .hero .layer-1 h2 {
+    font-size: 2.3rem;
+}
+
+main .hero .layer-1 p {
+    font-weight: 500;
+}
+
+main .hero .layer-1 * {
+    margin: 2px 0px;
+}
+
+main .hero .layer-1 .region-details {
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+main .hero .layer-1 .region-details:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+main .hero .layer-2 h1 {
+    text-align: center;
+    font-size: 20vw;
+    font-weight: 700;
+    margin: -23px 0px;
+    cursor: default;
+}
+
+main .hero .layer-3 {
+    text-align: end;
+}
+
+main .hero .layer-3 h2 {
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+
+main .hero .layer-3 * {
+    margin: 2px 0px;
+}
+
+main .hero .layer-3 .more-info {
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+main .hero .layer-3 .more-info:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+main .hero .layer-3 #pro_time {
+    display: none;
+}
+
+main .hero .layer-4 {
+    display: inherit;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin: 15px 0px;
+}
+
+main .hero .layer-4 div {
+    font-size: 1.3rem;
+    text-align: end;
+    margin: 10px 0px 0px 10px;
+    padding: 10px 16px;
+    background-color: var(--secondary-color);
+    border: 1px transparent solid;
+}
+
+main .hero .layer-4 div:hover {
+    cursor: pointer;
+    opacity: .6;
+    border: 1px var(--tertiary-color) solid;
+}
+
+main .hero .layer-5 {
+    display: inherit;
+    margin-top: 35px;
+    justify-content: flex-end;
+}
+
+main .hero .layer-5 .currency-world {
+    color: black;
+    display: inherit;
+    text-decoration: none;
+}
+
+main .hero .layer-5 .currency-world .CW-text-logo {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+main .hero .layer-5 .currency-world .CW-text-logo:hover {
+    cursor: pointer;
+}
+
+main .hero .layer-5 .currency-world .CW-dis p {
+    font-weight: 500;
+    border: 1px black solid;
+    padding: 10px 15px;
+}
+
+main .hero .layer-5 .currency-world .CW-dis p:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border: 1px transparent solid;
+}
+
+main .hero .layer-5 .currency-world .CW-dis span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.lower-section {
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: var(--quaternary-color);
+    margin-top: 50px;
+    height: 40vh;
+    width: 100%;
+}
+.lower-section p {
+    color: white;
+    margin: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    main .hero .layer-1 h2 {
+        font-size: 2rem;
+    }
+
+    main .hero .layer-3 h2 {
+        font-size: 2rem;
+    }
+
+    main .hero .layer-5 .currency-world {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    main .hero .layer-5 .currency-world .CW-text-logo {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    main .hero .layer-1 h2 {
+        font-size: 1.5rem;
+    }
+
+    main .hero .layer-3 h2 {
+        font-size: 1.5rem;
+    }
+
+    main .hero .layer-5 .currency-world .CW-text-logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main .hero .layer-2 h1 {
+        margin: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    header .other-container input {
+        display: none;
+    }
+
+    main .hero .layer-1 h2 {
+        font-size: 1rem;
+    }
+
+    main .hero .layer-3 h2 {
+        font-size: 1rem;
+    }
+}
