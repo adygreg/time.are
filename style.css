@@ -37,7 +37,7 @@ header .logo-container .logo-text {
     transition: .25s;
 }
 
-header .logo-container .github-link {
+header .github-link {
     text-decoration: none;
 }
 
