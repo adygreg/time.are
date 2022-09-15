@@ -37,25 +37,29 @@ function dateFunction() {
 
 }
 
+function getLocation() {
+    fetch('https://api.ipify.org/?format=json').then(res => res.json().then(result => {console.log(result.ip)}));
+}
+
 function setRegion() {
 
-    document.getElementById("city_name").textContent = "Saarbrücken";
-    document.getElementById("country_name").textContent = "Germany";
+    document.getElementById("city_name").textContent = "your";
+    document.getElementById("country_name").textContent = "country";
 }
 
 function internationTimings() {
-    // Add Custom API :D
-    document.getElementById("lon_time").textContent = + ':' + min;
-    document.getElementById("par_time").textContent = + ':' + min;
-    document.getElementById("kyv_time").textContent = + ':' + min;
-    document.getElementById("del_time").textContent = + ':' + (min - 30);
-    document.getElementById("tky_time").textContent = + ':' + min;
-    document.getElementById("lax_time").textContent = + ':' + min;
-    document.getElementById("nyc_time").textContent = + ':' + min;
+    document.getElementById("lon_time").textContent = luxon.DateTime.now().setZone('Europe/London').toFormat("HH:mm");
+    document.getElementById("par_time").textContent = luxon.DateTime.now().setZone('Europe/Paris').toFormat("HH:mm");
+    document.getElementById("kyv_time").textContent = luxon.DateTime.now().setZone('Europe/Kyiv').toFormat("HH:mm");
+    document.getElementById("del_time").textContent = luxon.DateTime.now().setZone('Asia/Calcutta').toFormat("HH:mm");
+    document.getElementById("tky_time").textContent = luxon.DateTime.now().setZone('Asia/Tokyo').toFormat("HH:mm");
+    document.getElementById("lax_time").textContent = luxon.DateTime.now().setZone('US/Pacific').toFormat("HH:mm");
+    document.getElementById("nyc_time").textContent = luxon.DateTime.now().setZone('US/Eastern').toFormat("HH:mm");
 }
 
 document.querySelector("title").textContent = 'Time.are | ' + timeFunction();
 
+//console.log(getLocation())
 setRegion();
 dateFunction();
 setInterval(timeFunction, 10);

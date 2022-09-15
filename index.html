@@ -8,6 +8,11 @@
     <title> Time.are </title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://www.iconsdb.com/icons/download/orange/clock-10-512.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +30,7 @@
                 <div class="layer-1">
                     <h2>Your time is exact!</h2>
                     <p>The difference from Time.are was +0.139 seconds (±0.128 seconds).</p>
-                    <p>Time in <span class="region-details"><span id="city_name" class="city-name">City</span>, <span
+                    <p>Time in <span class="region-details"><span id="city_name" class="city-name">City</span> <span
                                 id="country_name" class="country-name">Country</span></span> now:</p>
                 </div>
                 <div class="layer-2">
@@ -33,7 +38,9 @@
                             id="main_minute">00</span>:<span id="seconds">52</span></h1>
                 </div>
                 <div class="layer-3">
-                    <h2 id="digital_date" class="digital-date"><span id="main_day">Tuesday</span>, <span id="main_month">September</span> <span id="main_date">13</span>, <span id="main_yr">2022</span></h2>
+                    <h2 id="digital_date" class="digital-date"><span id="main_day">Tuesday</span>, <span
+                            id="main_month">September</span> <span id="main_date">13</span>, <span
+                            id="main_yr">2022</span></h2>
                     <p id="pro_time">Day of the Programmer</p>
                     <p>Sun: ↑ 07:09 ↓ 19:54 (12h 45m) <span id="more_info" class="more-info">More info</span></p>
                 </div>
@@ -81,6 +88,7 @@
             <p>project by <strong>AdyGreg</strong></p>
         </a>
     </div>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="script.js"></script>
 </body>
 
