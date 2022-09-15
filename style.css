@@ -37,6 +37,10 @@ header .logo-container .logo-text {
     transition: .25s;
 }
 
+header .logo-container .github-link {
+    text-decoration: none;
+}
+
 header .logo-container .logo-text:hover {
     cursor: pointer;
     opacity: .8;
